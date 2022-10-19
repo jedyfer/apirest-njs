@@ -1,0 +1,4 @@
+##  iniciar npm
+npm init -y
+
+npm i express
