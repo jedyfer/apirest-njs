@@ -1,4 +1,11 @@
 ##  iniciar npm
 npm init -y
 
-npm i express
+npm i express nodemon
+
+### en package.json
+agregar: "type": "module"   esto permitira hacer la importacion similar a react
+    ejemplo: import { } from "..."
+
+### nodemon: permite reiniciar el codigo
+    ejemplo: para que en cambio no tengamos que volver a conectar al servidor
