@@ -1,7 +1,9 @@
 ##  iniciar npm
 npm init -y
 
-npm i express nodemon
+npm i express 
+npm i nodemon -D
+npm i mysql2
 
 ### en package.json
 agregar: "type": "module"   esto permitira hacer la importacion similar a react
