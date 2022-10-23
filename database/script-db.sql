@@ -9,3 +9,10 @@ CREATE TABLE employee (
     primary key (id)
 );
 
+DESCRIBE employee
+
+INSERT INTO employee VALUES
+    ('', 'Joe', 1000),
+    ('', 'Henry', 2000),
+    ('', 'San', 2500),
+    ('', 'Max', 1500);
