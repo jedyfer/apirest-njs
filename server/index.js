@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(indexRoutes)
 
 //  usando las rutas
-app.use(employeesRoutes)
+app.use('/api', employeesRoutes)    //  esto significa que antes de la ruta ira /api
 
 app.listen(3000)
 
