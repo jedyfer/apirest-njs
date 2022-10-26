@@ -35,4 +35,17 @@ export const createEmployee = async (req, res) => {
 
 export const editEmployee = (req, res) => res.send('Actualizando empleados')
 
-export const deleteEmployee = (req, res) => res.send('Eliminando empleados')
+export const deleteEmployee = async (req, res) => {
+    const id = req.params.id
+
+    const [result] = await pool.query('DELETE FROM employee WHERE id = ?', [id])
+
+    //  condicional para verificar que se elimino a un empleado
+    if (result.affectedRows <= 0) return res.status(404).json({
+        message: 'Employee not found'
+    })
+
+    //  console.log(result)
+
+    res.sendStatus(204) //  204: operacion exitosa, sin mensaje
+}
