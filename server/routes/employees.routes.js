@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { createEmployee, deleteEmployee, editEmployee, getEmployeeById, getEmployees } from '../controllers/employees.controller.js'
+import { createEmployee, deleteEmployee, editEmployee, getEmployeeById, getEmployees, patchEmplayee } from '../controllers/employees.controller.js'
 
 const router = Router()
 
@@ -11,7 +11,9 @@ router.get('/employee/:id', getEmployeeById)
 
 router.post('/employees', createEmployee)
 
-router.put('/employees', editEmployee)
+router.put('/employee/:id', editEmployee)
+
+router.patch('/employee/:id', patchEmplayee)
 
 router.delete('/employee/:id', deleteEmployee)
 
