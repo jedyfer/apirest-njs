@@ -13,6 +13,13 @@ app.use(indexRoutes)
 //  usando las rutas
 app.use('/api', employeesRoutes)    //  esto significa que antes de la ruta ira /api
 
+//  middleware para 404
+app.use((req, res, next) => {
+    res.status(404).json({
+        message: 'endpoint not found'
+    })
+})
+
 app.listen(3000)
 
 console.log('Server running on port 3000')
