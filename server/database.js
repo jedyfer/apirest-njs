@@ -1,9 +1,10 @@
 import { createPool } from 'mysql2/promise' //  para usar async await
+import { HOST, USER, PASSWORD, DATABASE, DB_PORT } from './config.js'
 
 export const pool = createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    port: 3306,
-    database: 'njs_apirest'
+    host: HOST,
+    user: USER,
+    password: PASSWORD,
+    port: DB_PORT,
+    database: DATABASE
 })
